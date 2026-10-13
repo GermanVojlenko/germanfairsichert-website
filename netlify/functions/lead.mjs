@@ -15,9 +15,73 @@ async function sendMail(to,name,topic,pdf){
  const api=process.env.BREVO_API_KEY, sender=process.env.SENDER_EMAIL;
  if(!api||!sender) throw new Error('Maildienst nicht konfiguriert');
  const link=pdf.link; if(!link||!/^https:\/\//.test(link)) throw new Error('PDF-URL fehlt');
- const html=`<p>Hallo ${escapeHtml(name)},</p><p>hier ist dein angefordertes Dokument: ${escapeHtml(pdf.title)} zum Thema ${escapeHtml(topic)}.</p><p><a href="${escapeHtml(link)}">Checkliste öffnen (PDF)</a></p><p>Du möchtest deine Situation persönlich besprechen? Antworte einfach auf diese E-Mail.</p><p>Viele Grüße<br>German.Fairsichert</p>`;
- const r=await fetch('https://api.brevo.com/v3/smtp/email',{method:'POST',headers:{'Content-Type':'application/json','api-key':api},body:JSON.stringify({sender:{email:sender,name:'German.Fairsichert'},to:[{email:to,name}],subject:'Deine Checkliste zur finanziellen Sicherheit',htmlContent:html})});
- if(!r.ok)throw new Error(`Maildienst HTTP ${r.status}`);
+ 
+const html = `
+  <div style="font-family:Arial,sans-serif;max-width:580px;margin:auto;color:#182235;line-height:1.7;padding:20px;">
+    <p style="color:#007a52;font-size:12px;font-weight:bold;">
+      GERMAN.FAIRSICHERT · DEINE CHECKLISTE
+    </p>
+
+    <h2 style="font-size:25px;line-height:1.3;">
+      Mehr Klarheit. Weniger Fragezeichen.
+    </h2>
+
+    <p>Hallo ${escapeHtml(name.split(' ')[0])},</p>
+
+    <p>schön, dass du dich mit deiner finanziellen Absicherung beschäftigst!</p>
+
+    <p>Wie versprochen erhältst du hier deine Checkliste zum Thema
+    <strong>${escapeHtml(topic)}</strong>.</p>
+
+    <p>Sie hilft dir dabei, die wichtigsten Fragen zu klären,
+    mögliche Stolperfallen zu erkennen und herauszufinden,
+    worauf es bei deiner Entscheidung wirklich ankommt.</p>
+
+    <div style="background:#f2f6f4;padding:24px;border-radius:12px;text-align:center;margin:28px 0;">
+      <p style="font-weight:bold;margin-top:0;">
+        ${escapeHtml(pdf.title)}
+      </p>
+
+      <a href="${escapeHtml(link)}"
+         style="display:inline-block;background:#006b49;color:#ffffff;
+         padding:13px 22px;border-radius:8px;text-decoration:none;font-weight:bold;">
+        Checkliste öffnen (PDF)
+      </a>
+    </div>
+
+    <p><strong>Du hast noch Fragen?</strong></p>
+
+    <p>Dann antworte einfach auf diese E-Mail.
+    Ich schaue mir deine Situation gerne mit dir an –
+    verständlich, transparent und ohne Verkaufsdruck.</p>
+
+    <p>Viele Grüße<br>
+    <strong>German Vojlenko</strong><br>
+    Fachberater für Vorsorge, Investments & Gewerbe<br>
+    German.Fairsichert</p>
+  </div>
+`;
+const r = await fetch('https://api.brevo.com/v3/smtp/email', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'api-key': api
+  },
+  body: JSON.stringify({
+    sender: {
+      email: sender,
+      name: 'German Vojlenko | German.Fairsichert'
+    },
+    to: [{ email: to, name }],
+    subject: 'Deine Checkliste ist da! ✓',
+    htmlContent: html
+  })
+});
+
+if (!r.ok) {
+  throw new Error(`Maildienst HTTP ${r.status}`);
+}
+
  return (await r.json()).messageId || 'accepted';
 }
 function escapeHtml(v){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
