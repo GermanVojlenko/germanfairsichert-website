@@ -915,7 +915,22 @@
       const button=document.querySelector('#m-step-contact button[onclick="sendFullLeadSummaryToAgencyWithFallback()"]');
       button.disabled=true;err.classList.add('hidden');
       try{
-        await submitLead({type:'consultation',name:leadRecord.name,email,phone,topic:leadRecord.fokus,preference:leadRecord.preference,consentVersion:'2026-10-v1'});
+   await submitLead({
+  type: 'consultation',
+  name: leadRecord.name,
+  email: email,
+  phone: phone,
+  topic: leadRecord.fokus,
+  preference: leadRecord.preference,
+
+  existingPolicy: document.getElementById('m-existing-policy')?.value || '',
+  insurer: document.getElementById('m-insurer')?.value.trim() || '',
+  premium: document.getElementById('m-premium')?.value || '',
+  premiumPeriod: document.getElementById('m-premium-period')?.value || '',
+  message: document.getElementById('m-message')?.value.trim() || '',
+
+  consentVersion: '2026-10-v1'
+});
         modalGoToStep('success');
       }catch(e){err.textContent=e.message;err.classList.remove('hidden');}
       finally{button.disabled=false;}
