@@ -689,7 +689,42 @@
           <input type="email" id="m-email" placeholder="E-Mail-Adresse *" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none">
           <input type="tel" id="m-phone" placeholder="Mobilfunknummer *" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none">
         </div>
+<div class="space-y-3 pt-3">
+  <p class="text-sm font-bold text-white">
+    Deine aktuelle Versicherung (optional)
+  </p>
 
+  <select id="m-existing-policy"
+    class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white">
+    <option value="">Besteht bereits eine Versicherung?</option>
+    <option value="Ja">Ja</option>
+    <option value="Nein">Nein</option>
+    <option value="Unsicher">Ich bin mir nicht sicher</option>
+  </select>
+
+  <input type="text" id="m-insurer"
+    placeholder="Aktueller Versicherer (optional)"
+    maxlength="120"
+    class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white">
+
+  <div class="grid grid-cols-2 gap-3">
+    <input type="number" id="m-premium"
+      placeholder="Beitrag in €"
+      min="0" step="0.01"
+      class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white">
+
+    <select id="m-premium-period"
+      class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white">
+      <option value="monatlich">Monatlich</option>
+      <option value="jaehrlich">Jährlich</option>
+    </select>
+  </div>
+
+  <textarea id="m-message"
+    placeholder="Was ist dir bei deiner Absicherung besonders wichtig?"
+    maxlength="1000" rows="3"
+    class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white"></textarea>
+</div>
         <div class="space-y-2 pt-2">
           <label class="block text-xs text-slate-400 uppercase font-semibold">Wunsch-Art des Kontakts:</label>
           <div class="grid grid-cols-2 gap-2">
