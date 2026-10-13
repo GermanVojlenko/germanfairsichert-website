@@ -113,8 +113,111 @@ export default async function handler(request){
   try{const pdf=pdfForTopic(topic);const messageId=await sendMail(email,name,topic,pdf);await pool.query('INSERT INTO lead_events(lead_id,event_type,status,details) VALUES($1,$2,$3,$4)',[id,'pdf_email','accepted',JSON.stringify({messageId,pdf:pdf.key})]);}
   catch(e){await pool.query('INSERT INTO lead_events(lead_id,event_type,status,details) VALUES($1,$2,$3,$4)',[id,'pdf_email','failed',JSON.stringify({reason:String(e.message).slice(0,100)})]);return response(503,{ok:false,error:'Anfrage gespeichert, das passende Dokument ist noch nicht zugeordnet oder der Versand derzeit nicht verfügbar. Bitte kontaktiere uns direkt.'});}
  }
- if(b.type==='consultation' && process.env.AGENCY_NOTIFY_EMAIL){
-  try{await fetch('https://api.brevo.com/v3/smtp/email',{method:'POST',headers:{'Content-Type':'application/json','api-key':process.env.BREVO_API_KEY},body:JSON.stringify({sender:{email:process.env.SENDER_EMAIL,name:'German.Fairsichert'},to:[{email:process.env.AGENCY_NOTIFY_EMAIL}],subject:'Neuer Beratungskontakt',htmlContent:`Neuer Beratungskontakt: ${escapeHtml(name)} (${escapeHtml(email)}), ${escapeHtml(topic)}. Bitte im freigegebenen System bearbeiten.`})});}catch{}
- }
+ if (b.type === 'consultation' && process.env.AGENCY_NOTIFY_EMAIL) {
+  const safe = (value) =>
+    escapeHtml(value === undefined || value === null || value === ''
+      ? 'Nicht angegeben'
+      : String(value));
+
+  const row = (label, value) => `
+    <tr>
+      <td style="padding:12px;border-bottom:1px solid #e2e8f0;color:#64748b;width:42%">
+        ${label}
+      </td>
+      <td style="padding:12px;border-bottom:1px solid #e2e8f0;color:#0f172a;font-weight:600;overflow-wrap:anywhere">
+        ${safe(value)}
+      </td>
+    </tr>`;
+
+  const html = `
+    <!DOCTYPE html>
+    <html lang="de">
+    <head><meta charset="UTF-8"></head>
+    <body style="margin:0;padding:24px 12px;background:#f1f5f9;font-family:Arial,Helvetica,sans-serif">
+      <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+        <tr><td align="center">
+          <table role="presentation" width="600" cellspacing="0" cellpadding="0"
+            style="max-width:600px;width:100%;background:#ffffff;border-radius:14px;overflow:hidden">
+
+            <tr><td style="background:#0b1928;padding:28px">
+              <div style="color:#34d399;font-size:12px;font-weight:bold;letter-spacing:1px">
+                GERMAN.FAIRSICHERT
+              </div>
+              <h1 style="color:#ffffff;font-size:25px;margin:15px 0 8px">
+                Neue Beratungsanfrage
+              </h1>
+              <p style="color:#cbd5e1;font-size:14px;margin:0">
+                Ein Interessent möchte seine Absicherung überprüfen lassen.
+              </p>
+            </td></tr>
+
+            <tr><td style="padding:26px">
+              <h2 style="font-size:17px;color:#0f172a">Kontaktdaten</h2>
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0"
+                style="font-size:14px;border-collapse:collapse">
+                ${row('Name', name)}
+                ${row('E-Mail', email)}
+                ${row('Telefon', b.phone)}
+                ${row('Versicherungsthema', topic)}
+                ${row('Kontaktwunsch', b.preference)}
+              </table>
+
+              <h2 style="font-size:17px;color:#0f172a;margin-top:28px">
+                Bestehende Versicherung
+              </h2>
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0"
+                style="font-size:14px;border-collapse:collapse">
+                ${row('Bestehender Vertrag', b.existingPolicy)}
+                ${row('Aktueller Versicherer', b.insurer)}
+                ${row('Beitrag in EUR', b.premium)}
+                ${row('Zahlungsweise', b.premiumPeriod)}
+              </table>
+
+              <h2 style="font-size:17px;color:#0f172a;margin-top:28px">
+                Persönliches Anliegen
+              </h2>
+              <div style="background:#f1f5f9;padding:18px;border-radius:9px;color:#334155;font-size:14px;white-space:pre-wrap;overflow-wrap:anywhere">
+                ${safe(b.message)}
+              </div>
+
+              <p style="font-size:12px;color:#64748b;margin-top:25px">
+                Diese Anfrage wurde über German.Fairsichert übermittelt.
+                Bitte ausschließlich im freigegebenen System bearbeiten.
+              </p>
+            </td></tr>
+          </table>
+        </td></tr>
+      </table>
+    </body>
+    </html>`;
+
+  try {
+    const notifyResponse = await fetch(
+      'https://api.brevo.com/v3/smtp/email',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'api-key': process.env.BREVO_API_KEY
+        },
+        body: JSON.stringify({
+          sender: {
+            email: process.env.SENDER_EMAIL,
+            name: 'German.Fairsichert'
+          },
+          to: [{ email: process.env.AGENCY_NOTIFY_EMAIL }],
+          subject: 'German.Fairsichert | Neue Beratungsanfrage',
+          htmlContent: html
+        })
+      }
+    );
+
+    if (!notifyResponse.ok) {
+      console.error('Benachrichtigung fehlgeschlagen:', notifyResponse.status);
+    }
+  } catch (error) {
+    console.error('Benachrichtigung fehlgeschlagen:', error.message);
+  }
+}
  return response(200,{ok:true,requestId:crypto.randomUUID(),message:b.type==='pdf'?'PDF-Versand vom Dienst angenommen':'Anfrage gespeichert'});
 }
