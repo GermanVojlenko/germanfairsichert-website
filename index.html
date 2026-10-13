@@ -789,12 +789,21 @@
       document.getElementById('funnel-modal').classList.add('hidden');
       document.body.style.overflow = '';
     }
+function modalGoToStep(step) {
+  const target = document.getElementById(`m-step-${step}`);
 
-    function modalGoToStep(step) {
-      document.querySelectorAll('.m-step').forEach(el => el.classList.add('hidden'));
-      const target = document.getElementById(`m-step-${step}`);
-      if (target) target.classList.remove('hidden');
-    }
+  if (!target) {
+    console.error('Sicherheitscheck: Schritt nicht gefunden:', step);
+    return;
+  }
+
+  document.querySelectorAll('.m-step').forEach(el => {
+    el.classList.add('hidden');
+  });
+
+  target.classList.remove('hidden');
+}
+    
 
     function modalSelectFokus(fokus) {
       leadRecord.fokus = fokus;
@@ -871,7 +880,7 @@
 
     function modalSetMode(mode) {
       leadRecord.mode = mode;
-      modalGoToStep(mode === 'manual' ? 'manual' : 'upload');
+      modalGoToStep(mode === 'manual' ? 'contact' : 'upload');
     }
 
     function setContactPreference(btn, pref) {
