@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0">
+  <title>Provinzial Geschäftsstelle Ibrahim Evlice | Versicherung & Vorsorge in Bielefeld-Sennestadt</title>
+  <meta name="description" content="Persönliche Provinzial-Beratung in Bielefeld-Sennestadt: Kfz, Haftpflicht, Berufsunfähigkeit, Altersvorsorge und Firmenkunden. Ibrahim Evlice & German Vojlenko, Vennhofallee 59.">
+  <meta name="theme-color" content="#006341">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Elfsight disabled until consent management is configured -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            provinzial: { DEFAULT: '#006341', dark: '#004d32', light: '#007a52', accent: '#00b074' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-padding-top: 80px; }
+    body { -webkit-tap-highlight-color: transparent; padding-bottom: env(safe-area-inset-bottom); background-color: #050d09; }
+    .safe-bottom { bottom: calc(1.25rem + env(safe-area-inset-bottom)); }
+    input, select, textarea { font-size: 16px !important; }
+    @media (min-width: 640px) { input, select, textarea { font-size: 0.875rem !important; } }
+    .ios-scroll { -webkit-overflow-scrolling: touch; overscroll-behavior-y: contain; }
+    input[type="date"] { min-height: 44px; }
+  </style>
+</head>
+<body class="bg-[#050d09] text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-provinzial-accent selection:text-slate-950">
+
+  <!-- No non-essential cookies set by the new lead funnel; third-party embeds must be audited. -->
+  <!-- COOKIE BANNER -->
+  <div id="cookie-banner" class="hidden fixed inset-x-0 bottom-0 z-50 p-4 bg-slate-900/95 border-t border-slate-700 backdrop-blur-md shadow-2xl pb-[calc(1rem+env(safe-area-inset-bottom))]">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-300">
+      <div>
+        <p class="font-bold text-white mb-1"><i class="fa-solid fa-shield-cat text-provinzial-accent mr-2"></i>Datenschutz &amp; Tracking</p>
+        Wir nutzen Cookies zur Optimierung der Beratungsprozesse. Details in der <a href="https://www.provinzial.de/west/aussendienst/datenschutz.html?agn=53301" target="_blank" rel="noopener" class="text-provinzial-accent underline hover:text-white">Datenschutzerklärung</a>.
+      </div>
+      <div class="flex items-center gap-2 shrink-0 w-full md:w-auto">
+        <button onclick="acceptCookies(false)" class="w-1/2 md:w-auto py-2.5 px-4 border border-slate-700 text-slate-300 rounded-xl active:scale-95 transition">Essenziell</button>
+        <button onclick="acceptCookies(true)" class="w-1/2 md:w-auto py-2.5 px-5 bg-provinzial text-white font-bold rounded-xl active:scale-95 transition">Alle akzeptieren</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING QUICK ACTIONS -->
+  <div class="fixed safe-bottom right-4 z-40 flex flex-col gap-2.5">
+    <a href="mailto:evlice@provinzial.de?subject=Anfrage%20%C3%BCber%20Website" aria-label="E-Mail senden" class="w-12 h-12 bg-slate-800 hover:bg-slate-700 border border-slate-600 text-provinzial-accent rounded-full flex items-center justify-center shadow-2xl transition transform active:scale-90" title="E-Mail senden">
+      <i class="fa-solid fa-envelope text-lg"></i>
+    </a>
+    <a href="https://wa.me/4952053077477?text=Hallo%2C%20ich%20habe%20eine%20Frage" target="_blank" rel="noopener" aria-label="WhatsApp Chat öffnen" class="w-12 h-12 bg-provinzial hover:bg-provinzial-light text-white rounded-full flex items-center justify-center shadow-2xl transition transform active:scale-90" title="WhatsApp Chat">
+      <i class="fa-brands fa-whatsapp text-2xl"></i>
+    </a>
+    <a href="tel:+4952053077477" aria-label="Anrufen" class="w-12 h-12 bg-provinzial-dark hover:bg-provinzial text-white rounded-full flex items-center justify-center shadow-2xl transition transform active:scale-90" title="Direkt anrufen">
+      <i class="fa-solid fa-phone text-lg"></i>
+    </a>
+  </div>
+
+  <!-- HEADER -->
+  <header class="bg-slate-900/95 border-b border-provinzial/30 sticky top-0 z-30 backdrop-blur pt-[env(safe-area-inset-top)]">
+    <div class="py-2.5 px-4 border-b border-slate-800/60">
+      <div class="max-w-5xl mx-auto flex justify-between items-center text-xs">
+        <div class="flex items-center space-x-2">
+          <span class="inline-block w-2.5 h-2.5 rounded-full bg-provinzial-accent animate-pulse"></span>
+          <span class="font-bold tracking-tight text-white uppercase truncate max-w-[210px] sm:max-w-none">Provinzial Ibrahim Evlice</span>
+        </div>
+        <div class="flex items-center space-x-3 sm:space-x-4 text-slate-300">
+          <span class="hidden sm:inline text-[11px]"><i class="fa-solid fa-language text-provinzial-accent mr-1"></i> DE | TR | EN | RU</span>
+          <a href="tel:+4952053077477" class="bg-provinzial/10 border border-provinzial/40 text-provinzial-accent font-semibold px-2.5 py-1.5 rounded-lg hover:bg-provinzial/20 active:scale-95 transition flex items-center">
+            <i class="fa-solid fa-phone mr-1.5 text-[10px]"></i> <span class="text-xs">05205 3077477</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="max-w-5xl mx-auto px-4 py-2 hidden md:flex items-center justify-center gap-7 text-xs font-semibold text-slate-300">
+      <a href="#leistungen" class="hover:text-provinzial-accent transition">Themenfelder</a>
+      <a href="#team" class="hover:text-provinzial-accent transition">Team</a>
+      <a href="#ueber-uns" class="hover:text-provinzial-accent transition">Über uns</a>
+      <a href="#bewertungen" class="hover:text-provinzial-accent transition">Bewertungen</a>
+      <a href="#faq" class="hover:text-provinzial-accent transition">FAQ</a>
+      <a href="#kontakt" class="hover:text-provinzial-accent transition">Kontakt &amp; Anfahrt</a>
+    </nav>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 py-6 sm:py-8 w-full flex-grow space-y-12 sm:space-y-14">
+
+    <!-- HERO SECTION -->
+    <section class="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-center bg-slate-900/60 border border-provinzial/30 rounded-3xl p-5 sm:p-10 shadow-2xl">
+      <div class="md:col-span-7 space-y-4 text-left">
+        <div class="inline-flex items-center bg-provinzial/15 border border-provinzial/40 text-provinzial-accent text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+          <i class="fa-solid fa-shield-halved mr-1.5"></i> Provinzial Beratung für OWL (agn=53301)
+        </div>
+        <h1 class="text-2xl sm:text-4xl font-extrabold text-white leading-tight tracking-tight">
+          Versicherung, die mitwächst — von der ersten Wohnung bis zur Altersvorsorge.
+        </h1>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Persönliche Betreuung in Bielefeld-Sennestadt und ganz OWL durch Ibrahim Evlice und German Vojlenko. Persönliche Risikoanalyse, verständliche Empfehlungen und direkte Betreuung vor Ort.
+        </p>
+
+        <div class="grid grid-cols-2 gap-3 pt-2 text-xs">
+          <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+            <p class="font-bold text-slate-100">Ibrahim Evlice</p>
+            <p class="text-[11px] text-provinzial-accent font-medium">Deutsch, Türkçe</p>
+            <p class="text-[10px] text-slate-400">Geschäftsstellenleiter</p>
+          </div>
+          <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+            <p class="font-bold text-slate-100">German Vojlenko</p>
+            <p class="text-[11px] text-provinzial-accent font-medium">Deutsch, English, Русский</p>
+            <p class="text-[10px] text-slate-400">Fachberater für Vorsorge, Investments &amp; Gewerbe</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-3 pt-4">
+          <button type="button" onclick="openFunnelModal()" class="w-full sm:w-auto justify-center bg-provinzial hover:bg-provinzial-light text-white font-extrabold px-6 py-3.5 rounded-xl text-sm transition shadow-lg flex items-center active:scale-95">
+            <i class="fa-solid fa-bolt mr-2"></i> Sicherheitscheck starten
+          </button>
+          <a href="https://www.provinzial.de/west/services/formulare/formular_terminwunsch.html?agn=53301" target="_blank" rel="noopener" class="w-full sm:w-auto justify-center bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-semibold px-5 py-3.5 rounded-xl text-sm transition flex items-center active:scale-95">
+            <i class="fa-regular fa-calendar-check mr-2 text-provinzial-accent"></i> Terminwunsch melden
+          </a>
+        </div>
+      </div>
+
+      <div class="md:col-span-5 flex justify-center">
+        <div class="w-56 sm:w-72">
+          <svg viewBox="0 0 480 460" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto drop-shadow-2xl" role="img">
+            <circle cx="240" cy="230" r="210" fill="#003522"/>
+            <path d="M240 60 L370 105 V235 C370 320 315 385 240 410 C165 385 110 320 110 235 V105 Z" fill="none" stroke="#006341" stroke-width="8"/>
+            <path d="M240 60 L370 105 V235 C370 320 315 385 240 410 C165 385 110 320 110 235 V105 Z" fill="#E7EEE7" opacity="0.1"/>
+            <polyline points="150,290 195,250 225,275 270,205 320,150" fill="none" stroke="#B8862B" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="150" cy="290" r="8" fill="#B8862B"/>
+            <circle cx="195" cy="250" r="8" fill="#B8862B"/>
+            <circle cx="225" cy="275" r="8" fill="#B8862B"/>
+            <circle cx="270" cy="205" r="8" fill="#B8862B"/>
+            <circle cx="320" cy="150" r="10" fill="#006341"/>
+            <text x="240" y="150" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="20" fill="#006341" opacity="0.85">OWL</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- UNSERE THEMENFELDER -->
+    <section id="leistungen" class="space-y-5 scroll-mt-20">
+      <div class="text-center">
+        <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Unsere Themenfelder</h2>
+        <p class="text-xs text-slate-400 mt-1">Klicke auf ein Themenfeld, um den Check direkt für diesen Bereich zu starten:</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4">
+        
+        <div onclick="openFunnelDirect('Kfz-Versicherungen | Provinzial')" class="bg-slate-900 border border-slate-800 rounded-2xl p-5 hover:border-provinzial cursor-pointer transition active:scale-[0.98] group">
+          <div class="flex items-center justify-between mb-2">
+            <i class="fa-solid fa-car text-provinzial-accent text-lg"></i>
+            <span class="text-[10px] text-provinzial-accent font-semibold group-hover:underline">Direkt prüfen →</span>
+          </div>
+          <h3 class="text-sm font-bold text-white mb-1">Kfz &amp; Mobilität</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Auto- und Motorradversicherung mit Vor-Ort-Regulierung in Bielefeld.</p>
+        </div>
+
+        <div onclick="openFunnelDirect('Wohnen & Gebäude | Provinzial')" class="bg-slate-900 border border-slate-800 rounded-2xl p-5 hover:border-provinzial cursor-pointer transition active:scale-[0.98] group">
+          <div class="flex items-center justify-between mb-2">
+            <i class="fa-solid fa-house text-provinzial-accent text-lg"></i>
+            <span class="text-[10px] text-provinzial-accent font-semibold group-hover:underline">Direkt prüfen →</span>
+          </div>
+          <h3 class="text-sm font-bold text-white mb-1">Wohnen &amp; Haftpflicht</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Privat-Haftpflicht, Hausrat und Wohngebäudeabsicherung.</p>
+        </div>
+
+        <div onclick="openFunnelDirect('BU/DU/EU')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openFunnelDirect('BU/DU/EU')}" class="bg-slate-900 border border-slate-800 rounded-2xl p-5 hover:border-provinzial cursor-pointer transition active:scale-[0.98] group" aria-label="Berufsunfähigkeitsversicherung prüfen">
+          <div class="flex items-center justify-between mb-2"><i class="fa-solid fa-shield-halved text-provinzial-accent text-lg" aria-hidden="true"></i><span class="text-[10px] text-provinzial-accent font-semibold group-hover:underline">Direkt prüfen →</span></div>
+          <h3 class="text-sm font-bold text-white mb-1">Berufsunfähigkeit &amp; Arbeitskraft</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Wie sicher ist dein Einkommen, wenn du deinen Beruf nicht mehr ausüben kannst?</p>
+          <a href="https://www.provinzial.de/west/versicherung/leben-und-rente/berufsunfaehigkeitsversicherung/berufsunfaehigkeitsversicherung.html?agn=53301" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="inline-flex items-center gap-1 mt-3 text-xs text-provinzial-accent hover:underline"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Produktinformationen</a>
+        </div>
+
+        <div onclick="openFunnelDirect('FondsRente Vario | Provinzial')" class="bg-slate-900 border border-slate-800 rounded-2xl p-5 hover:border-provinzial cursor-pointer transition active:scale-[0.98] group">
+          <div class="flex items-center justify-between mb-2">
+            <i class="fa-solid fa-chart-line text-provinzial-accent text-lg"></i>
+            <span class="text-[10px] text-provinzial-accent font-semibold group-hover:underline">Direkt prüfen →</span>
+          </div>
+          <h3 class="text-sm font-bold text-white mb-1">Altersvorsorge &amp; Rente</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">FondsRente Vario und Altersvorsorgedepot mit ETF-Sparplan.</p>
+        </div>
+
+        <div onclick="openFunnelDirect('Rechtsschutzversicherung | Provinzial')" class="bg-slate-900 border border-slate-800 rounded-2xl p-5 hover:border-provinzial cursor-pointer transition active:scale-[0.98] group">
+          <div class="flex items-center justify-between mb-2">
+            <i class="fa-solid fa-scale-balanced text-provinzial-accent text-lg"></i>
+            <span class="text-[10px] text-provinzial-accent font-semibold group-hover:underline">Direkt prüfen →</span>
+          </div>
+          <h3 class="text-sm font-bold text-white mb-1">Rechtsschutz</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Privat-, Berufs-, Verkehrs- und Mietrechtsschutz nach Maß.</p>
+        </div>
+
+        <div onclick="openFunnelDirect('Firmenkunden | Provinzial')" class="bg-slate-900 border border-slate-800 rounded-2xl p-5 hover:border-provinzial cursor-pointer transition active:scale-[0.98] group">
+          <div class="flex items-center justify-between mb-2">
+            <i class="fa-solid fa-building text-provinzial-accent text-lg"></i>
+            <span class="text-[10px] text-provinzial-accent font-semibold group-hover:underline">Direkt prüfen →</span>
+          </div>
+          <h3 class="text-sm font-bold text-white mb-1">Firmenkunden</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Gewerbeschutz, Betriebshaftpflicht und bAV für Unternehmen.</p>
+        </div>
+
+        <div onclick="openFunnelDirect('Private Krankenversicherung | Angestellte')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openFunnelDirect('Private Krankenversicherung | Angestellte')}" class="bg-slate-900 border border-slate-800 rounded-2xl p-5 hover:border-provinzial cursor-pointer transition active:scale-[0.98] group" aria-label="PKV für Angestellte prüfen">
+          <div class="flex items-center justify-between mb-2">
+            <i class="fa-solid fa-heart-pulse text-provinzial-accent text-lg" aria-hidden="true"></i>
+            <span class="text-[10px] text-provinzial-accent font-semibold group-hover:underline">Direkt prüfen →</span>
+          </div>
+          <h3 class="text-sm font-bold text-white mb-1">Private Krankenversicherung</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Für Angestellte: Voraussetzungen, Leistungen und langfristige Kosten gemeinsam prüfen.</p>
+          <a href="https://www.provinzial.de/west/versicherung/gesundheit/private-krankenversicherung/angestellte.html?agn=53301" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="inline-flex items-center gap-1 mt-3 text-xs text-provinzial-accent hover:underline" aria-label="Offizielle Informationen zur PKV für Angestellte öffnen"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Produktinformationen</a>
+        </div>
+
+        <div onclick="openFunnelDirect('Tierversicherung | Provinzial')" class="bg-slate-900 border border-slate-800 rounded-2xl p-5 hover:border-provinzial cursor-pointer transition active:scale-[0.98] group">
+          <div class="flex items-center justify-between mb-2">
+            <i class="fa-solid fa-paw text-provinzial-accent text-lg"></i>
+            <span class="text-[10px] text-provinzial-accent font-semibold group-hover:underline">Direkt prüfen →</span>
+          </div>
+          <h3 class="text-sm font-bold text-white mb-1">Tier- &amp; Gesundheitsschutz</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Hundehalter-Haftpflicht, Tier-OP, Zahnzusatz- und Unfallschutz.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" class="space-y-5 scroll-mt-20">
+      <div class="text-center">
+        <span class="text-xs uppercase font-bold text-provinzial-accent tracking-wider">Die Menschen hinter der Beratung</span>
+        <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mt-1">Keine Hotline. Echte Ansprechpartner. Klare Empfehlungen.</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+        <div class="bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-7 space-y-4">
+          <div class="flex items-center gap-4">
+            <div class="w-16 h-16 rounded-full bg-slate-800 border-2 border-provinzial/50 flex items-center justify-center text-2xl text-provinzial-accent shrink-0 overflow-hidden">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div>
+              <p class="font-bold text-white">Ibrahim Evlice</p>
+              <p class="text-[11px] text-provinzial-accent font-medium">Geschäftsstellenleiter</p>
+            </div>
+          </div>
+          <p class="text-sm text-slate-300 leading-relaxed italic">
+            „Ich kenne viele meiner Kunden seit Jahren — vom ersten Auto bis zum Eigenheim. Genau diese Nähe will ich auch online spürbar machen: Bei uns landest du nicht in einer Warteschleife, sondern bei jemandem, der dich wirklich kennt."
+          </p>
+          <div class="flex gap-2 pt-1">
+            <a href="https://wa.me/4952053077477?text=Hallo%20Herr%20Evlice%2C%20ich%20habe%20eine%20Frage" target="_blank" rel="noopener" class="flex-1 text-center bg-provinzial hover:bg-provinzial-light text-white font-bold px-3 py-2.5 rounded-lg text-xs transition">
+              <i class="fa-brands fa-whatsapp mr-1"></i> Ibrahim schreiben
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-7 space-y-4">
+          <div class="flex items-center gap-4">
+            <div class="w-16 h-16 rounded-full bg-slate-800 border-2 border-provinzial/50 flex items-center justify-center text-2xl text-provinzial-accent shrink-0 overflow-hidden">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div>
+              <p class="font-bold text-white">German Vojlenko</p>
+              <p class="text-[11px] text-provinzial-accent font-medium">Fachberater für Vorsorge, Investments &amp; Gewerbe</p>
+            </div>
+          </div>
+          <p class="text-sm text-slate-300 leading-relaxed italic">
+            „Ich zeige dir, welche finanziellen Risiken du wirklich trägst, was sie kosten können und welche Lösungen sinnvoll sind. Erst analysieren, dann klar empfehlen – damit du selbst entscheiden kannst."
+          </p>
+          <div class="flex gap-2 pt-1">
+            <a href="https://wa.me/4952053077477?text=Hallo%20German%2C%20ich%20habe%20eine%20Frage" target="_blank" rel="noopener" class="flex-1 text-center bg-provinzial hover:bg-provinzial-light text-white font-bold px-3 py-2.5 rounded-lg text-xs transition">
+              <i class="fa-brands fa-whatsapp mr-1"></i> German schreiben
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GOOGLE REZENSIONEN -->
+    <section id="bewertungen" class="space-y-4 scroll-mt-20">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-slate-800 pb-4">
+        <div>
+          <div class="flex items-center gap-2">
+            <i class="fa-brands fa-google text-xl text-amber-400"></i>
+            <h2 class="text-lg sm:text-xl font-bold text-white">Bewertungen auf Google</h2>
+          </div>
+          <p class="text-xs text-slate-400">Provinzial Versicherung Bielefeld — Ibrahim Evlice</p>
+        </div>
+        <a href="https://www.google.com/search?q=Provinzial+Versicherung+Bielefeld+-+Ibrahim+Evlice" target="_blank" rel="noopener" class="flex items-center gap-2 bg-slate-900 border border-slate-800 hover:border-provinzial px-3.5 py-2 rounded-xl text-xs transition">
+          <span class="font-bold text-white">Jetzt bei Google bewerten</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-provinzial-accent"></i>
+        </a>
+      </div>
+      <p class="text-xs text-slate-400">Bewertungen findest du über den Google-Link oben.</p>
+    </section>
+
+    <!-- KONTAKT & MAP -->
+    <section id="kontakt" class="grid grid-cols-1 md:grid-cols-2 gap-6 scroll-mt-20">
+      <div class="bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-3">
+        <span class="text-xs uppercase font-bold text-provinzial-accent tracking-wider">Kontakt &amp; Anfahrt</span>
+        <h2 class="text-xl font-bold text-white">Vennhofallee 59, 33689 Bielefeld</h2>
+        <div class="text-xs space-y-2 pt-1 text-slate-300">
+          <p><i class="fa-solid fa-phone text-provinzial-accent mr-2"></i> <a href="tel:+4952053077477" class="hover:text-white">05205 3077477</a></p>
+          <p><i class="fa-solid fa-envelope text-provinzial-accent mr-2"></i> <a href="mailto:evlice@provinzial.de" class="hover:text-white underline">evlice@provinzial.de</a></p>
+        </div>
+      </div>
+      <div class="rounded-3xl overflow-hidden border border-slate-800 min-h-[260px] relative">
+        <iframe title="Anfahrt Vennhofallee 59" class="w-full h-full min-h-[260px]" loading="lazy" src="https://www.google.com/maps?q=Vennhofallee+59,+33689+Bielefeld&output=embed"></iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 border-t border-slate-800 text-slate-400 text-xs py-10 px-4">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-500 gap-2">
+      <div>© 2026 Provinzial Geschäftsstelle Ibrahim Evlice · Alle Rechte vorbehalten.</div>
+      <div class="space-x-4">
+        <a href="https://www.provinzial.de/west/aussendienst/AD-Impressum-individuell.html?agn=53301" target="_blank" rel="noopener" class="hover:text-slate-300">Impressum</a>
+        <a href="https://www.provinzial.de/west/aussendienst/datenschutz.html?agn=53301" target="_blank" rel="noopener" class="hover:text-slate-300">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FULLSCREEN MODAL -->
+  <div id="funnel-modal" class="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md hidden overflow-y-auto p-3 sm:p-6 flex items-center justify-center ios-scroll">
+    <div class="relative w-full max-w-xl bg-slate-900 border border-slate-700 rounded-3xl p-5 sm:p-8 shadow-2xl my-auto">
+
+      <button onclick="closeFunnelModal()" aria-label="Schließen" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition active:scale-90">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+
+      <div class="w-full bg-slate-800 h-2 rounded-full mb-6 overflow-hidden mt-1">
+        <div id="modal-progress" class="bg-provinzial h-full w-[15%] transition-all duration-300"></div>
+      </div>
+
+      <!-- STEP 1: SPARTEN-AUSWAHL MIT SUCHLEISTE -->
+      <div id="m-step-1" class="m-step space-y-4">
+        <div class="text-left mb-2">
+          <span class="text-xs uppercase font-bold text-provinzial-accent tracking-wider">Schritt 1 von 6</span>
+          <h2 class="text-lg font-bold text-white mt-1">Welchen Bereich möchtest du prüfen lassen?</h2>
+          <p class="text-xs text-slate-400">Klicke auf das Thema oder nutze <span class="text-provinzial-accent font-bold">(i)</span> für die Verzeichnisdetails:</p>
+        </div>
+
+        <div class="relative">
+          <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-slate-400">
+            <i class="fa-solid fa-magnifying-glass text-xs"></i>
+          </span>
+          <input type="text" id="sparten-search" oninput="filterSparten()" placeholder="Checkliste / Thema suchen..." class="w-full bg-slate-950 border border-slate-700 rounded-xl pl-9 pr-3 py-2.5 text-xs text-white placeholder-slate-500 focus:border-provinzial outline-none">
+        </div>
+
+        <div id="sparten-list" class="space-y-2 max-h-[44vh] sm:max-h-[380px] overflow-y-auto pr-1 text-left ios-scroll">
+          
+          <div data-title="Firmenkunden Gewerbe" onclick="modalSelectFokus('Firmenkunden | Provinzial')" class="sparten-item p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 hover:border-provinzial rounded-xl flex items-center justify-between cursor-pointer group transition active:scale-[0.98]">
+            <div class="flex items-center space-x-3"><i class="fa-solid fa-building text-provinzial-accent text-base"></i><span class="font-semibold text-sm text-white">Firmenkunden | Provinzial</span></div>
+            <div class="flex items-center space-x-2">
+              <a href="https://www.provinzial.de/west/firmenkunden.html?agn=53301" target="_blank" rel="noopener" onclick="event.stopPropagation()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-provinzial/20 text-slate-400 hover:text-provinzial-accent flex items-center justify-center text-xs border border-slate-700" title="Offizielle Seite öffnen"><i class="fa-solid fa-info"></i></a>
+              <i class="fa-solid fa-chevron-right text-slate-600 group-hover:text-provinzial-accent text-xs"></i>
+            </div>
+          </div>
+
+          <div data-title="Haus Wohnen Gebäude Hausrat" onclick="modalSelectFokus('Wohnen & Gebäude | Provinzial')" class="sparten-item p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 hover:border-provinzial rounded-xl flex items-center justify-between cursor-pointer group transition active:scale-[0.98]">
+            <div class="flex items-center space-x-3"><i class="fa-solid fa-house text-provinzial-accent text-base"></i><span class="font-semibold text-sm text-white">Haus &amp; Wohnen | Provinzial</span></div>
+            <div class="flex items-center space-x-2">
+              <a href="https://www.provinzial.de/west/versicherung/wohnen.html?agn=53301" target="_blank" rel="noopener" onclick="event.stopPropagation()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-provinzial/20 text-slate-400 hover:text-provinzial-accent flex items-center justify-center text-xs border border-slate-700" title="Offizielle Seite öffnen"><i class="fa-solid fa-info"></i></a>
+              <i class="fa-solid fa-chevron-right text-slate-600 group-hover:text-provinzial-accent text-xs"></i>
+            </div>
+          </div>
+
+          <div data-title="Rechtsschutz Privat" onclick="modalSelectFokus('Rechtsschutzversicherung | Provinzial')" class="sparten-item p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 hover:border-provinzial rounded-xl flex items-center justify-between cursor-pointer group transition active:scale-[0.98]">
+            <div class="flex items-center space-x-3"><i class="fa-solid fa-scale-balanced text-provinzial-accent text-base"></i><span class="font-semibold text-sm text-white">Privat-Rechtsschutz | Provinzial</span></div>
+            <div class="flex items-center space-x-2">
+              <a href="https://www.provinzial.de/west/versicherung/rechtsschutzversicherung/privat-rechtsschutzversicherung.html?agn=53301" target="_blank" rel="noopener" onclick="event.stopPropagation()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-provinzial/20 text-slate-400 hover:text-provinzial-accent flex items-center justify-center text-xs border border-slate-700" title="Offizielle Seite öffnen"><i class="fa-solid fa-info"></i></a>
+              <i class="fa-solid fa-chevron-right text-slate-600 group-hover:text-provinzial-accent text-xs"></i>
+            </div>
+          </div>
+
+          <div data-title="Auto Kfz Mobilität" onclick="modalSelectFokus('Kfz-Versicherungen | Provinzial')" class="sparten-item p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 hover:border-provinzial rounded-xl flex items-center justify-between cursor-pointer group transition active:scale-[0.98]">
+            <div class="flex items-center space-x-3"><i class="fa-solid fa-car text-provinzial-accent text-base"></i><span class="font-semibold text-sm text-white">Autoversicherung | Provinzial</span></div>
+            <div class="flex items-center space-x-2">
+              <a href="https://www.provinzial.de/west/versicherung/kfz-versicherung/autoversicherung.html?agn=53301" target="_blank" rel="noopener" onclick="event.stopPropagation()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-provinzial/20 text-slate-400 hover:text-provinzial-accent flex items-center justify-center text-xs border border-slate-700" title="Offizielle Seite öffnen"><i class="fa-solid fa-info"></i></a>
+              <i class="fa-solid fa-chevron-right text-slate-600 group-hover:text-provinzial-accent text-xs"></i>
+            </div>
+          </div>
+
+          <div data-title="Haftpflicht Privat" onclick="modalSelectFokus('Haftpflichtversicherungen | Provinzial')" class="sparten-item p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 hover:border-provinzial rounded-xl flex items-center justify-between cursor-pointer group transition active:scale-[0.98]">
+            <div class="flex items-center space-x-3"><i class="fa-solid fa-user-shield text-provinzial-accent text-base"></i><span class="font-semibold text-sm text-white">Privathaftpflicht | Provinzial</span></div>
+            <div class="flex items-center space-x-2">
+              <a href="https://www.provinzial.de/west/versicherung/haftpflichtversicherung/privathaftpflichtversicherung.html?agn=53301" target="_blank" rel="noopener" onclick="event.stopPropagation()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-provinzial/20 text-slate-400 hover:text-provinzial-accent flex items-center justify-center text-xs border border-slate-700" title="Offizielle Seite öffnen"><i class="fa-solid fa-info"></i></a>
+              <i class="fa-solid fa-chevron-right text-slate-600 group-hover:text-provinzial-accent text-xs"></i>
+            </div>
+          </div>
+
+          <div data-title="Tier Hund Katze" onclick="modalSelectFokus('Tierversicherung | Provinzial')" class="sparten-item p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 hover:border-provinzial rounded-xl flex items-center justify-between cursor-pointer group transition active:scale-[0.98]">
+            <div class="flex items-center space-x-3"><i class="fa-solid fa-paw text-provinzial-accent text-base"></i><span class="font-semibold text-sm text-white">Hunde-Tierversicherung | Provinzial</span></div>
+            <div class="flex items-center space-x-2">
+              <a href="https://www.provinzial.de/west/versicherung/tierversicherung/hund.html?agn=53301" target="_blank" rel="noopener" onclick="event.stopPropagation()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-provinzial/20 text-slate-400 hover:text-provinzial-accent flex items-center justify-center text-xs border border-slate-700" title="Offizielle Seite öffnen"><i class="fa-solid fa-info"></i></a>
+              <i class="fa-solid fa-chevron-right text-slate-600 group-hover:text-provinzial-accent text-xs"></i>
+            </div>
+          </div>
+
+          <div data-title="Rente Vorsorge Fonds ETF" onclick="modalSelectFokus('FondsRente Vario | Provinzial')" class="sparten-item p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 hover:border-provinzial rounded-xl flex items-center justify-between cursor-pointer group transition active:scale-[0.98]">
+            <div class="flex items-center space-x-3"><i class="fa-solid fa-chart-line text-provinzial-accent text-base"></i><span class="font-semibold text-sm text-white">FondsRente Vario | Provinzial</span></div>
+            <div class="flex items-center space-x-2">
+              <a href="https://www.provinzial.de/west/versicherung/leben-und-rente/fondsgebundene-rentenversicherung/fonds-rente-vario.html?agn=53301" target="_blank" rel="noopener" onclick="event.stopPropagation()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-provinzial/20 text-slate-400 hover:text-provinzial-accent flex items-center justify-center text-xs border border-slate-700" title="Offizielle Seite öffnen"><i class="fa-solid fa-info"></i></a>
+              <i class="fa-solid fa-chevron-right text-slate-600 group-hover:text-provinzial-accent text-xs"></i>
+            </div>
+          </div>
+
+          <div data-title="Depot Vorsorge Rente" onclick="modalSelectFokus('Altersvorsorgedepot | Provinzial')" class="sparten-item p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 hover:border-provinzial rounded-xl flex items-center justify-between cursor-pointer group transition active:scale-[0.98]">
+            <div class="flex items-center space-x-3"><i class="fa-solid fa-wallet text-provinzial-accent text-base"></i><span class="font-semibold text-sm text-white">Altersvorsorgedepot | Provinzial</span></div>
+            <div class="flex items-center space-x-2">
+              <a href="https://www.provinzial.de/west/versicherung/leben-und-rente/gefoerderte-rentenversicherung/av-depot.html?agn=53301" target="_blank" rel="noopener" onclick="event.stopPropagation()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-provinzial/20 text-slate-400 hover:text-provinzial-accent flex items-center justify-center text-xs border border-slate-700" title="Offizielle Seite öffnen"><i class="fa-solid fa-info"></i></a>
+              <i class="fa-solid fa-chevron-right text-slate-600 group-hover:text-provinzial-accent text-xs"></i>
+            </div>
+          </div>
+
+          <div data-title="BU Berufsunfähigkeit Dienstunfähigkeit Erwerbsunfähigkeit Arbeitskraft" onclick="modalSelectFokus('BU/DU/EU')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();modalSelectFokus('BU/DU/EU')}" class="sparten-item p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 hover:border-provinzial rounded-xl flex items-center justify-between cursor-pointer group transition active:scale-[0.98]">
+            <div class="flex items-center space-x-3"><i class="fa-solid fa-shield-halved text-provinzial-accent text-base" aria-hidden="true"></i><span class="font-semibold text-sm text-white">Berufsunfähigkeit (BU/DU/EU)</span></div>
+            <a href="https://www.provinzial.de/west/versicherung/leben-und-rente/berufsunfaehigkeitsversicherung/berufsunfaehigkeitsversicherung.html?agn=53301" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-provinzial-accent flex items-center justify-center text-xs border border-slate-700" title="Offizielle BU-Informationen öffnen" aria-label="Offizielle BU-Informationen öffnen"><i class="fa-solid fa-info"></i></a>
+          </div>
+
+          <div data-title="PKV private Krankenversicherung Angestellte Gesundheit Vollversicherung" onclick="modalSelectFokus('Private Krankenversicherung | Angestellte')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();modalSelectFokus('Private Krankenversicherung | Angestellte')}" class="sparten-item p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 hover:border-provinzial rounded-xl flex items-center justify-between cursor-pointer group transition active:scale-[0.98]">
+            <div class="flex items-center space-x-3"><i class="fa-solid fa-heart-pulse text-provinzial-accent text-base" aria-hidden="true"></i><span class="font-semibold text-sm text-white">PKV für Angestellte | Provinzial</span></div>
+            <div class="flex items-center space-x-2">
+              <a href="https://www.provinzial.de/west/versicherung/gesundheit/private-krankenversicherung/angestellte.html?agn=53301" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-provinzial/20 text-slate-400 hover:text-provinzial-accent flex items-center justify-center text-xs border border-slate-700" title="Offizielle PKV-Informationen öffnen" aria-label="Offizielle PKV-Informationen öffnen"><i class="fa-solid fa-info" aria-hidden="true"></i></a>
+              <i class="fa-solid fa-chevron-right text-slate-600 group-hover:text-provinzial-accent text-xs" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <div data-title="Unfall Gesundheit" onclick="modalSelectFokus('Unfallversicherung | Provinzial')" class="sparten-item p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 hover:border-provinzial rounded-xl flex items-center justify-between cursor-pointer group transition active:scale-[0.98]">
+            <div class="flex items-center space-x-3"><i class="fa-solid fa-person-falling-burst text-provinzial-accent text-base"></i><span class="font-semibold text-sm text-white">Private Unfallversicherung | Provinzial</span></div>
+            <div class="flex items-center space-x-2">
+              <a href="https://www.provinzial.de/west/versicherung/gesundheit/unfallversicherung/private-unfallversicherung.html?agn=53301" target="_blank" rel="noopener" onclick="event.stopPropagation()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-provinzial/20 text-slate-400 hover:text-provinzial-accent flex items-center justify-center text-xs border border-slate-700" title="Offizielle Seite öffnen"><i class="fa-solid fa-info"></i></a>
+              <i class="fa-solid fa-chevron-right text-slate-600 group-hover:text-provinzial-accent text-xs"></i>
+            </div>
+          </div>
+
+          <div data-title="Zahn Zahnzusatz Gesundheit" onclick="modalSelectFokus('Zahnzusatzversicherung | Provinzial')" class="sparten-item p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 hover:border-provinzial rounded-xl flex items-center justify-between cursor-pointer group transition active:scale-[0.98]">
+            <div class="flex items-center space-x-3"><i class="fa-solid fa-tooth text-provinzial-accent text-base"></i><span class="font-semibold text-sm text-white">Zahnzusatzversicherung | Provinzial</span></div>
+            <div class="flex items-center space-x-2">
+              <a href="https://www.provinzial.de/west/versicherung/gesundheit/zahnzusatzversicherung.html?agn=53301" target="_blank" rel="noopener" onclick="event.stopPropagation()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-provinzial/20 text-slate-400 hover:text-provinzial-accent flex items-center justify-center text-xs border border-slate-700" title="Offizielle Seite öffnen"><i class="fa-solid fa-info"></i></a>
+              <i class="fa-solid fa-chevron-right text-slate-600 group-hover:text-provinzial-accent text-xs"></i>
+            </div>
+          </div>
+
+          <div data-title="Reise Ausland Krank" onclick="modalSelectFokus('Reiseversicherung | Provinzial')" class="sparten-item p-3 bg-slate-950 hover:bg-slate-800 border border-slate-700 hover:border-provinzial rounded-xl flex items-center justify-between cursor-pointer group transition active:scale-[0.98]">
+            <div class="flex items-center space-x-3"><i class="fa-solid fa-plane-departure text-provinzial-accent text-base"></i><span class="font-semibold text-sm text-white">Auslandsreisekranken | Provinzial</span></div>
+            <div class="flex items-center space-x-2">
+              <a href="https://www.provinzial.de/west/versicherung/reiseversicherung/auslandsreisekrankenversicherung.html?agn=53301" target="_blank" rel="noopener" onclick="event.stopPropagation()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-provinzial/20 text-slate-400 hover:text-provinzial-accent flex items-center justify-center text-xs border border-slate-700" title="Offizielle Seite öffnen"><i class="fa-solid fa-info"></i></a>
+              <i class="fa-solid fa-chevron-right text-slate-600 group-hover:text-provinzial-accent text-xs"></i>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="flex justify-end pt-2">
+          <button type="button" onclick="modalGoToChannel()" class="w-full sm:w-auto bg-provinzial hover:bg-provinzial-light text-white font-bold px-6 py-3 rounded-xl transition text-xs active:scale-95">
+            Weiter zur Kanalauswahl <i class="fa-solid fa-arrow-right ml-1"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- STEP 1.5: KANAL-WEICHE -->
+      <div id="m-step-channel" class="m-step space-y-4 hidden text-left">
+        <div class="mb-2">
+          <span class="text-xs uppercase font-bold text-provinzial-accent tracking-wider">Schritt 2 von 6</span>
+          <h2 class="text-lg font-bold text-white mt-1">Wie möchtest du zum Thema fortfahren?</h2>
+          <p class="text-xs text-slate-400 mt-1">Ausgewähltes Thema: <strong id="selected-topic-label" class="text-provinzial-accent"></strong></p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-3 pt-2">
+          <a id="whatsapp-direct-btn" href="#" target="_blank" rel="noopener" class="p-4 bg-provinzial/10 hover:bg-provinzial/20 border-2 border-provinzial/60 rounded-2xl text-left transition flex items-center justify-between group">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-full bg-provinzial text-white flex items-center justify-center text-2xl shrink-0">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <div>
+                <p class="font-bold text-white text-sm">Kontakt per WhatsApp</p>
+                <p class="text-xs text-provinzial-accent mt-0.5">Direkter Chat mit unserer Geschäftsstelle.</p>
+              </div>
+            </div>
+            <i class="fa-solid fa-arrow-right text-provinzial-accent"></i>
+          </a>
+
+          <button type="button" onclick="modalOpenPdfFunnel()" class="p-4 bg-slate-950 hover:bg-slate-800 border border-slate-700 hover:border-provinzial rounded-2xl text-left transition flex items-center justify-between group">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-full bg-slate-800 text-provinzial-accent flex items-center justify-center text-xl shrink-0">
+                <i class="fa-solid fa-file-pdf"></i>
+              </div>
+              <div>
+                <p class="font-bold text-white text-sm">Checkliste anfordern</p>
+                <p class="text-xs text-slate-400 mt-0.5">Kostenloser Leitfaden direkt per E-Mail.</p>
+              </div>
+            </div>
+            <i class="fa-solid fa-chevron-right text-slate-500 text-xs"></i>
+          </button>
+
+          <button type="button" onclick="modalGoToStep(2)" class="p-4 bg-slate-950 hover:bg-slate-800 border border-slate-700 hover:border-provinzial rounded-2xl text-left transition flex items-center justify-between group">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-full bg-slate-800 text-slate-300 flex items-center justify-center text-xl shrink-0">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <div>
+                <p class="font-bold text-white text-sm">Weiter zur Risikoprüfung</p>
+                <p class="text-xs text-slate-400 mt-0.5">Basisdaten, Upload &amp; Terminvereinbarung.</p>
+              </div>
+            </div>
+            <i class="fa-solid fa-chevron-right text-slate-500 text-xs"></i>
+          </button>
+        </div>
+
+        <div class="pt-3">
+          <button type="button" onclick="modalGoToStep(1)" class="text-slate-400 text-sm hover:underline"><i class="fa-solid fa-arrow-left mr-1"></i> Thema ändern</button>
+        </div>
+      </div>
+
+      <!-- PDF FUNNEL MODAL -->
+      <div id="m-step-pdf-funnel" class="m-step space-y-4 hidden text-left">
+        <div class="mb-2">
+          <span class="text-xs uppercase font-bold text-provinzial-accent tracking-wider">Kostenloser Leitfaden</span>
+          <h2 class="text-lg font-bold text-white mt-1">Checkliste per E-Mail erhalten</h2>
+        </div>
+        <div class="space-y-3">
+          <label for="pdf-topic" class="block text-xs font-semibold text-slate-300 mb-1">Welche Checkliste möchtest du erhalten? *</label>
+          <select id="pdf-topic" required class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none" aria-label="Checkliste auswählen">
+            <option value="">Bitte Checkliste auswählen</option>
+            <option value="V0800">V0800</option>
+            <option value="ETF-Policen">ETF-Policen</option>
+            <option value="BU/DU/EU">BU/DU/EU</option>
+            <option value="Rentenlücke">Rentenlücke</option>
+            <option value="Haus & Wohnen">Haus & Wohnen</option>
+            <option value="Haftpflicht">Haftpflicht</option>
+            <option value="Firmenkunden">Firmenkunden</option>
+            <option value="Rechtsschutz">Rechtsschutz</option>
+            <option value="Kfz">Kfz</option>
+            <option value="PKV Voll">PKV Voll</option>
+            <option value="KV Zusatz">KV Zusatz</option>
+            <option value="Hunde">Hunde</option>
+            <option value="Fahranfänger">Fahranfänger</option>
+            <option value="Altersvorsorge Depot">Altersvorsorge Depot</option>
+            <option value="Unfallversicherung">Unfallversicherung</option>
+          </select>
+          <p class="text-[11px] text-slate-400">Du erhältst ausschließlich die hier ausgewählte Checkliste. Weitere E-Mails nur nach separater Einwilligung.</p>
+          <input type="text" id="pdf-name" placeholder="Vor- &amp; Nachname *" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none">
+          <input type="tel" id="pdf-phone" placeholder="Mobilfunknummer (freiwillig)" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none">
+          <input type="email" id="pdf-email" placeholder="E-Mail-Adresse *" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none">
+        </div>
+        <label class="flex items-start gap-2 text-xs text-slate-300"><input id="pdf-marketing" type="checkbox" class="mt-1 accent-green-600"><span>Ja, ich möchte zusätzlich passende Informationen und Beratungstipps per E-Mail erhalten. Freiwillig und jederzeit widerrufbar.</span></label>
+        <label class="flex items-start gap-2 text-xs text-slate-300"><input id="pdf-newsletter" type="checkbox" class="mt-1 accent-green-600"><span>Ich möchte den German.Fairsichert-Newsletter abonnieren (Bestätigung per E-Mail).</span></label>
+        <p class="text-[11px] text-slate-400">Deine Daten nutzen wir zur Zustellung der angeforderten Checkliste. Weitere E-Mails nur mit separater Einwilligung. <a href="https://www.provinzial.de/west/aussendienst/datenschutz.html?agn=53301" target="_blank" rel="noopener" class="underline">Datenschutz</a></p>
+        <input id="pdf-website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hidden" type="text">
+        <p id="pdf-error" class="text-[11px] text-rose-400 hidden">Bitte alle Felder vollständig ausfüllen.</p>
+        <div class="flex justify-between items-center pt-4">
+          <button type="button" onclick="modalGoToStep('channel')" class="text-slate-400 text-sm hover:underline"><i class="fa-solid fa-arrow-left mr-1"></i> Zurück</button>
+          <button type="button" onclick="submitPdfRequest()" class="bg-provinzial hover:bg-provinzial-light text-white font-bold px-6 py-3 rounded-xl text-xs">
+            Checkliste anfordern <i class="fa-solid fa-paper-plane ml-1"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- PDF SUCCESS -->
+      <div id="m-step-pdf-success" class="m-step space-y-4 text-center hidden">
+        <div class="w-12 h-12 bg-provinzial/20 text-provinzial-accent rounded-full flex items-center justify-center mx-auto text-xl">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <h2 class="text-lg font-bold text-white">Anfrage angenommen!</h2>
+        <p class="text-xs text-slate-300">Danke! Deine Anfrage wurde verarbeitet. Bitte prüfe dein E-Mail-Postfach und gegebenenfalls den Spam-Ordner.</p>
+        <button type="button" onclick="closeFunnelModal()" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 rounded-xl text-xs">Fenster schließen</button>
+      </div>
+
+      <!-- STEP 2: BASISDATEN -->
+      <div id="m-step-2" class="m-step space-y-4 hidden text-left">
+        <div class="mb-2">
+          <span class="text-xs uppercase font-bold text-provinzial-accent tracking-wider">Schritt 3 von 6</span>
+          <h2 class="text-lg font-bold text-white mt-1">Basisdaten zur Risikoprüfung</h2>
+        </div>
+        <div class="space-y-3">
+          <div>
+            <label for="m-lead-name" class="block text-xs text-slate-400 uppercase font-semibold mb-1">Vor- &amp; Nachname *</label>
+            <input type="text" id="m-lead-name" placeholder="Max Mustermann" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none">
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label for="m-lead-dob" class="block text-xs text-slate-400 uppercase font-semibold mb-1">Geburtsdatum *</label>
+              <input type="date" id="m-lead-dob" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none">
+            </div>
+            <div>
+              <label for="m-lead-job" class="block text-xs text-slate-400 uppercase font-semibold mb-1">Aktueller Beruf *</label>
+              <input type="text" id="m-lead-job" placeholder="z. B. Angestellter" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none">
+            </div>
+          </div>
+          <input type="text" id="m-lead-street" placeholder="Straße &amp; Hausnummer *" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none">
+          <div class="grid grid-cols-3 gap-2">
+            <input type="text" id="m-lead-plz" placeholder="PLZ *" inputmode="numeric" class="bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none">
+            <input type="text" id="m-lead-city" placeholder="Ort *" class="col-span-2 bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none">
+          </div>
+        </div>
+        <p id="m-step2-error" class="text-[11px] text-rose-400 hidden">Bitte alle Pflichtfelder ausfüllen.</p>
+        <div class="flex justify-between items-center pt-4">
+          <button type="button" onclick="modalGoToStep('channel')" class="text-slate-400 text-sm hover:underline py-2 px-1"><i class="fa-solid fa-arrow-left mr-1"></i> Zurück</button>
+          <button type="button" onclick="modalValidateStep2()" class="bg-provinzial hover:bg-provinzial-light text-white font-bold px-6 py-3 rounded-xl transition text-xs">Weiter <i class="fa-solid fa-arrow-right ml-1"></i></button>
+        </div>
+      </div>
+
+      <!-- STEP 3: EINKOMMEN & STATUS -->
+      <div id="m-step-3" class="m-step space-y-4 hidden text-left">
+        <div class="mb-2">
+          <span class="text-xs uppercase font-bold text-provinzial-accent tracking-wider">Schritt 4 von 6</span>
+          <h2 class="text-lg font-bold text-white mt-1">Beruflicher Status &amp; Einkommen</h2>
+        </div>
+        <div class="space-y-3">
+          <select id="m-employment" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none">
+            <option value="Angestellter">Angestellt</option>
+            <option value="Beamter">Beamter / Öffentlicher Dienst</option>
+            <option value="Selbststaendiger">Selbstständig</option>
+            <option value="Ausbildung / Studium">In Ausbildung / Studium</option>
+          </select>
+          <select id="m-income" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none">
+            <option value="unter 2000">Unter 2.000 €</option>
+            <option value="2000-3000" selected>2.000 € - 3.000 €</option>
+            <option value="3000-4500">3.000 € - 4.500 €</option>
+            <option value="ueber 4500">Über 4.500 €</option>
+          </select>
+        </div>
+        <div class="flex justify-between items-center pt-4">
+          <button type="button" onclick="modalGoToStep(2)" class="text-slate-400 text-sm hover:underline"><i class="fa-solid fa-arrow-left mr-1"></i> Zurück</button>
+          <button type="button" onclick="modalRouteFinance()" class="bg-provinzial hover:bg-provinzial-light text-white font-bold px-6 py-3 rounded-xl text-xs">Weiter <i class="fa-solid fa-arrow-right ml-1"></i></button>
+        </div>
+      </div>
+
+      <!-- WEICHE: MANUELL ODER UPLOAD -->
+      <div id="m-step-choice-mode" class="m-step space-y-4 hidden text-left">
+        <div class="mb-2">
+          <span class="text-xs uppercase font-bold text-provinzial-accent tracking-wider">Schritt 5 von 6</span>
+          <h2 class="text-lg font-bold text-white mt-1">Datenübermittlung</h2>
+        </div>
+        <div class="grid grid-cols-1 gap-3">
+          <button type="button" onclick="modalSetMode('manual')" class="p-4 bg-slate-950 hover:bg-slate-800 border border-slate-700 rounded-xl text-left transition flex items-center justify-between group">
+            <div>
+              <p class="font-bold text-white text-sm"><i class="fa-solid fa-keyboard mr-2 text-provinzial-accent"></i>Manuell eingeben</p>
+              <p class="text-xs text-slate-400 mt-0.5">Anbieter &amp; Beitrag angeben.</p>
+            </div>
+            <i class="fa-solid fa-chevron-right text-slate-500 text-xs"></i>
+          </button>
+          <button type="button" onclick="alert('Dokumentenupload erfolgt ausschließlich über einen freigegebenen sicheren Kanal. Bitte wähle die manuelle Eingabe.')" class="p-4 bg-slate-950 hover:bg-slate-800 border border-slate-700 rounded-xl text-left transition flex items-center justify-between group">
+            <div>
+              <p class="font-bold text-white text-sm"><i class="fa-solid fa-cloud-arrow-up mr-2 text-provinzial-accent"></i>Per Drag &amp; Drop hochladen</p>
+              <p class="text-xs text-slate-400 mt-0.5">Police oder Foto hochladen.</p>
+            </div>
+            <i class="fa-solid fa-chevron-right text-slate-500 text-xs"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- MANUELL -->
+      <div id="m-step-manual" class="m-step space-y-4 hidden text-left">
+        <h2 class="text-lg font-bold text-white">Bestehende Angaben</h2>
+        <div class="space-y-3">
+          <input type="text" id="m-man-prov" placeholder="Aktueller Anbieter" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none">
+          <input type="text" id="m-man-prem" placeholder="Monatsbeitrag (ca.)" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none">
+        </div>
+        <div class="flex justify-between items-center pt-4">
+          <button type="button" onclick="modalGoToStep('choice-mode')" class="text-slate-400 text-sm hover:underline"><i class="fa-solid fa-arrow-left mr-1"></i> Zurück</button>
+          <button type="button" onclick="modalGoToStep('contact')" class="bg-provinzial hover:bg-provinzial-light text-white font-bold px-6 py-3 rounded-xl text-xs">Weiter <i class="fa-solid fa-arrow-right ml-1"></i></button>
+        </div>
+      </div>
+
+      <!-- UPLOAD -->
+      <div id="m-step-upload" class="m-step space-y-4 hidden text-left">
+        <h2 class="text-lg font-bold text-white">Unterlagen hochladen</h2>
+        <div id="m-dropzone" class="border-2 border-dashed border-slate-700 hover:border-provinzial rounded-xl p-6 text-center cursor-pointer bg-slate-950">
+          <i class="fa-solid fa-cloud-arrow-up text-3xl text-provinzial-accent mb-2"></i>
+          <p class="text-xs text-slate-300">Datei hier hineinziehen oder tippen</p>
+          <input type="file" id="m-file-input" class="hidden">
+        </div>
+        <div id="m-file-name" class="text-xs text-provinzial-accent hidden font-mono bg-slate-950 p-2 rounded border border-provinzial/30"></div>
+        <div class="flex justify-between items-center pt-4">
+          <button type="button" onclick="modalGoToStep('choice-mode')" class="text-slate-400 text-sm hover:underline"><i class="fa-solid fa-arrow-left mr-1"></i> Zurück</button>
+          <button type="button" onclick="modalGoToStep('contact')" class="bg-provinzial hover:bg-provinzial-light text-white font-bold px-6 py-3 rounded-xl text-xs">Weiter <i class="fa-solid fa-arrow-right ml-1"></i></button>
+        </div>
+      </div>
+
+      <!-- KONTAKT -->
+      <div id="m-step-contact" class="m-step space-y-4 hidden text-left">
+        <h2 class="text-lg font-bold text-white">Schritt 6 von 6: Kontaktdaten</h2>
+        <div class="space-y-3">
+          <input type="email" id="m-email" placeholder="E-Mail-Adresse *" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none">
+          <input type="tel" id="m-phone" placeholder="Mobilfunknummer *" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none">
+        </div>
+
+        <div class="space-y-2 pt-2">
+          <label class="block text-xs text-slate-400 uppercase font-semibold">Wunsch-Art des Kontakts:</label>
+          <div class="grid grid-cols-2 gap-2">
+            <button type="button" onclick="setContactPreference(this, 'Direkter Terminwunsch')" class="pref-btn p-3 border border-provinzial bg-provinzial/20 rounded-xl text-xs font-bold text-white text-center">Termin vereinbaren</button>
+            <button type="button" onclick="setContactPreference(this, 'Schneller Rückruf')" class="pref-btn p-3 border border-slate-700 bg-slate-950 rounded-xl text-xs font-bold text-slate-300 text-center">Rückruf anfordern</button>
+          </div>
+        </div>
+
+        <label class="flex items-start gap-2.5 text-[11px] text-slate-400 pt-1 cursor-pointer">
+          <input type="checkbox" id="m-consent" class="mt-0.5 accent-provinzial w-4 h-4 shrink-0 rounded">
+          <span>Ich stimme der Kontaktaufnahme gemäß <a href="https://www.provinzial.de/west/aussendienst/datenschutz.html?agn=53301" target="_blank" rel="noopener" class="text-provinzial-accent underline">Datenschutz</a> zu.</span>
+        </label>
+        <p id="m-contact-error" class="text-[11px] text-rose-400 hidden">Bitte Pflichtfelder und Einwilligung bestätigen.</p>
+
+        <div class="flex justify-between items-center pt-2">
+          <button type="button" onclick="modalGoToStep('choice-mode')" class="text-slate-400 text-sm hover:underline"><i class="fa-solid fa-arrow-left mr-1"></i> Zurück</button>
+          <button type="button" onclick="sendFullLeadSummaryToAgencyWithFallback()" class="bg-provinzial hover:bg-provinzial-light text-white font-extrabold px-6 py-3 rounded-xl text-xs">
+            Anfrage verbindlich absenden <i class="fa-solid fa-paper-plane ml-1"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- SUCCESS -->
+      <div id="m-step-success" class="m-step space-y-4 text-center hidden">
+        <div class="w-12 h-12 bg-provinzial/20 text-provinzial-accent rounded-full flex items-center justify-center mx-auto text-xl">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <h2 class="text-lg font-bold text-white">Vielen Dank! Ihre Anfrage ist da.</h2>
+        <p class="text-xs text-slate-300">Unsere Geschäftsstelle wurde informiert und meldet sich zeitnah bei Ihnen.</p>
+        <button type="button" onclick="closeFunnelModal()" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 rounded-xl text-xs">Fenster schließen</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+    const LEAD_WEBHOOK_URL = 'https://REPLACE-WITH-YOUR-POWER-AUTOMATE-HTTP-TRIGGER-URL';
+
+    const leadRecord = {
+      fokus: 'Haus & Wohnen | Provinzial',
+      name: '', dob: '', job: '', street: '', plz: '', city: '',
+      employment: '', income: '', mode: 'Manuell', provider: '', premium: '',
+      email: '', phone: '', preference: 'Direkter Terminwunsch', pdfRequest: false
+    };
+
+    function saveToMemory(name, email, phone) { if(name) leadRecord.name=name; if(email) leadRecord.email=email; if(phone) leadRecord.phone=phone; }
+    const campaign = new URLSearchParams(location.search);
+    const tracking = { source: campaign.get('utm_source') || document.referrer || 'direct', medium: campaign.get('utm_medium') || '', campaign: campaign.get('utm_campaign') || '', content: campaign.get('utm_content') || '' };
+    async function submitLead(data) {
+      const response = await fetch('/.netlify/functions/lead', {method:'POST', headers:{'Content-Type':'application/json'},body:JSON.stringify({...data,tracking})});
+      const result = await response.json().catch(()=>({}));
+      if(!response.ok || !result.ok) throw new Error(result.error || 'Die Anfrage konnte nicht verarbeitet werden. Bitte versuche es erneut.');
+      return result;
+    }
+    function openFunnelModal() {
+      document.getElementById('funnel-modal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      modalGoToStep(1);
+    }
+
+    function openFunnelDirect(topicName) {
+      leadRecord.fokus = topicName;
+      document.getElementById('selected-topic-label').innerText = topicName;
+      document.getElementById('whatsapp-direct-btn').href = `https://wa.me/4952053077477?text=${encodeURIComponent('Hallo, ich habe eine Frage zum Thema: ' + topicName)}`;
+      document.getElementById('funnel-modal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      modalGoToStep('channel');
+    }
+
+    function closeFunnelModal() {
+      document.getElementById('funnel-modal').classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    function modalGoToStep(step) {
+      document.querySelectorAll('.m-step').forEach(el => el.classList.add('hidden'));
+      const target = document.getElementById(`m-step-${step}`);
+      if (target) target.classList.remove('hidden');
+    }
+
+    function modalSelectFokus(fokus) {
+      leadRecord.fokus = fokus;
+      document.getElementById('selected-topic-label').innerText = fokus;
+      document.getElementById('whatsapp-direct-btn').href = `https://wa.me/4952053077477?text=${encodeURIComponent('Hallo, ich interessiere mich für: ' + fokus)}`;
+      modalGoToStep('channel');
+    }
+
+    function modalGoToChannel() {
+      document.getElementById('selected-topic-label').innerText = leadRecord.fokus;
+      document.getElementById('whatsapp-direct-btn').href = `https://wa.me/4952053077477?text=${encodeURIComponent('Hallo, ich interessiere mich für: ' + leadRecord.fokus)}`;
+      modalGoToStep('channel');
+    }
+
+    function filterSparten() {
+      const q = document.getElementById('sparten-search').value.toLowerCase();
+      document.querySelectorAll('.sparten-item').forEach(item => {
+        const title = item.getAttribute('data-title').toLowerCase();
+        item.style.display = title.includes(q) ? 'flex' : 'none';
+      });
+    }
+
+    const PDF_TOPIC_SUGGESTIONS = {"Kfz-Versicherungen | Provinzial": "Kfz", "Wohnen & Gebäude | Provinzial": "Haus & Wohnen", "FondsRente Vario | Provinzial": "ETF-Policen", "Rechtsschutzversicherung | Provinzial": "Rechtsschutz", "Firmenkunden | Provinzial": "Firmenkunden", "Private Krankenversicherung | Angestellte": "PKV Voll", "Tierversicherung | Provinzial": "Hunde", "BU/DU/EU": "BU/DU/EU", "Berufsunfähigkeitsversicherung | Provinzial": "BU/DU/EU"};
+    function suggestPdfTopic(topic) {
+      const select=document.getElementById('pdf-topic');
+      if(select) select.value=PDF_TOPIC_SUGGESTIONS[topic]||'';
+    }
+
+    function modalOpenPdfFunnel() {
+      leadRecord.pdfRequest = true;
+      suggestPdfTopic(leadRecord.fokus);
+      modalGoToStep('pdf-funnel');
+    }
+
+    async function submitPdfRequest() {
+      const pdfTopic=document.getElementById('pdf-topic').value;
+      const name=document.getElementById('pdf-name').value.trim();
+      const phone=document.getElementById('pdf-phone').value.trim();
+      const email=document.getElementById('pdf-email').value.trim();
+      const err=document.getElementById('pdf-error');
+      const button=document.querySelector('#m-step-pdf-funnel button[onclick="submitPdfRequest()"]');
+      if(!pdfTopic || !name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){err.textContent='Bitte Checkliste, Name und gültige E-Mail-Adresse eingeben.';err.classList.remove('hidden');return;}
+      err.classList.add('hidden'); button.disabled=true;button.textContent='Wird verarbeitet …';
+      try {
+        await submitLead({type:'pdf',name,email,phone,topic:pdfTopic,marketingConsent:document.getElementById('pdf-marketing').checked,newsletterConsent:document.getElementById('pdf-newsletter').checked,website:document.getElementById('pdf-website').value,consentVersion:'2026-10-v1'});
+        modalGoToStep('pdf-success');
+      } catch(e){err.textContent=e.message;err.classList.remove('hidden');}
+      finally{button.disabled=false;button.innerHTML='Checkliste anfordern <i class="fa-solid fa-paper-plane ml-1"></i>';}
+    }
+
+    function modalValidateStep2() {
+      leadRecord.name = document.getElementById('m-lead-name').value.trim();
+      leadRecord.dob = document.getElementById('m-lead-dob').value;
+      leadRecord.job = document.getElementById('m-lead-job').value.trim();
+      leadRecord.street = document.getElementById('m-lead-street').value.trim();
+      leadRecord.plz = document.getElementById('m-lead-plz').value.trim();
+      leadRecord.city = document.getElementById('m-lead-city').value.trim();
+
+      const errorEl = document.getElementById('m-step2-error');
+      if (!leadRecord.name || !leadRecord.dob || !leadRecord.job || !leadRecord.street || !leadRecord.plz || !leadRecord.city) {
+        errorEl.classList.remove('hidden');
+        return;
+      }
+      errorEl.classList.add('hidden');
+      saveToMemory(leadRecord.name, null, null);
+      modalGoToStep(3);
+    }
+
+    function modalRouteFinance() {
+      leadRecord.employment = document.getElementById('m-employment').value;
+      leadRecord.income = document.getElementById('m-income').value;
+      modalGoToStep('choice-mode');
+    }
+
+    function modalSetMode(mode) {
+      leadRecord.mode = mode;
+      modalGoToStep(mode === 'manual' ? 'manual' : 'upload');
+    }
+
+    function setContactPreference(btn, pref) {
+      document.querySelectorAll('.pref-btn').forEach(b => {
+        b.classList.remove('border-provinzial', 'bg-provinzial/20', 'text-white');
+        b.classList.add('border-slate-700', 'bg-slate-950', 'text-slate-300');
+      });
+      btn.classList.add('border-provinzial', 'bg-provinzial/20', 'text-white');
+      btn.classList.remove('border-slate-700', 'bg-slate-950', 'text-slate-300');
+      leadRecord.preference = pref;
+    }
+
+    const mDrop = document.getElementById('m-dropzone');
+    const mInput = document.getElementById('m-file-input');
+    const mFileLabel = document.getElementById('m-file-name');
+    if(mDrop) {
+      mDrop.addEventListener('click', () => mInput.click());
+      mInput.addEventListener('change', (e) => {
+        if (e.target.files.length) {
+          leadRecord.fileName = e.target.files[0].name;
+          mFileLabel.innerText = 'Ausgewählt: ' + e.target.files[0].name;
+          mFileLabel.classList.remove('hidden');
+        }
+      });
+    }
+
+    async function sendFullLeadSummaryToAgencyWithFallback() {
+      const err=document.getElementById('m-contact-error');
+      const email=document.getElementById('m-email').value.trim(),phone=document.getElementById('m-phone').value.trim();
+      if(!document.getElementById('m-consent').checked || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !phone){err.textContent='Bitte Kontaktdaten und Einwilligung prüfen.';err.classList.remove('hidden');return;}
+      const button=document.querySelector('#m-step-contact button[onclick="sendFullLeadSummaryToAgencyWithFallback()"]');
+      button.disabled=true;err.classList.add('hidden');
+      try{
+        await submitLead({type:'consultation',name:leadRecord.name,email,phone,topic:leadRecord.fokus,preference:leadRecord.preference,consentVersion:'2026-10-v1'});
+        modalGoToStep('success');
+      }catch(e){err.textContent=e.message;err.classList.remove('hidden');}
+      finally{button.disabled=false;}
+    }
+
+    function acceptCookies(allow) { document.getElementById('cookie-banner').classList.add('hidden'); }
+  </script>
+</body>
+</html>
