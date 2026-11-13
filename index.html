@@ -112,18 +112,19 @@
 
       <div class="md:col-span-5 flex justify-center">
         <div class="w-56 sm:w-72">
-          <svg viewBox="0 0 480 460" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto drop-shadow-2xl" role="img">
-            <circle cx="240" cy="230" r="210" fill="#003522"/>
-            <path d="M240 60 L370 105 V235 C370 320 315 385 240 410 C165 385 110 320 110 235 V105 Z" fill="none" stroke="#006341" stroke-width="8"/>
-            <path d="M240 60 L370 105 V235 C370 320 315 385 240 410 C165 385 110 320 110 235 V105 Z" fill="#E7EEE7" opacity="0.1"/>
-            <polyline points="150,290 195,250 225,275 270,205 320,150" fill="none" stroke="#B8862B" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="150" cy="290" r="8" fill="#B8862B"/>
-            <circle cx="195" cy="250" r="8" fill="#B8862B"/>
-            <circle cx="225" cy="275" r="8" fill="#B8862B"/>
-            <circle cx="270" cy="205" r="8" fill="#B8862B"/>
-            <circle cx="320" cy="150" r="10" fill="#006341"/>
-            <text x="240" y="150" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="20" fill="#006341" opacity="0.85">OWL</text>
-          </svg>
+          <div class="w-full max-w-md rounded-3xl overflow-hidden border border-slate-700 bg-slate-900 shadow-2xl">
+  <div id="office-view" class="aspect-[4/3] flex flex-col items-center justify-center text-center p-6 gap-3">
+    <i class="fa-solid fa-building text-4xl text-provinzial-accent"></i>
+    <p class="font-bold text-white">Unser Büro in Bielefeld-Sennestadt</p>
+    <p class="text-xs text-slate-400">Vennhofallee 59. Schau dir an, wo du uns findest.</p>
+    <button type="button" onclick="loadOffice()" class="bg-provinzial hover:bg-provinzial-light text-white font-bold px-4 py-2.5 rounded-xl text-xs">Büro im Street View ansehen</button>
+    <p class="text-xs text-slate-400">Beim Laden werden Daten an Google übertragen.</p>
+  </div>
+  <a href="https://www.google.com/maps/@51.9476634,8.5813362,3a,75y,33.31h,80.66t/data=!3m7!1e1!3m5!1sCIHM0ogKEICAgIDm5JuxlAE!2e10!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U-KHUzcBWr1Pe5ZL5hTWqJOKE5tn5YykHnSK5jvZamhMu_TMdaHyr2c4HvQ8XqLjCvauz8urTKp3hl2ceFMCwbUusXQcQ4ZHdlpdQQgQST1pMKPyu4K2m4FmlJn1S5K1wNPB86x%3Dw900-h600-k-no-pi9.337625053104588-ya5.995334909375-ro0-fo100!7i12000!8i6000?hl=de" target="_blank" rel="noopener" class="block text-center text-xs text-provinzial-accent py-2.5 border-t border-slate-800">In Google Maps öffnen</a>
+</div>
+<script>
+function loadOffice(){document.getElementById('office-view').innerHTML='<iframe title="Unser Büro im Street View" class="w-full h-full" style="min-height:260px" loading="lazy" referrerpolicy="no-referrer" allowfullscreen src="https://maps.google.com/maps?q=&layer=c&cbll=51.9476634,8.5813362&cbp=11,33.31,,0,-9.3&source=embed&output=svembed"></iframe>';}
+</script>
         </div>
       </div>
     </section>
